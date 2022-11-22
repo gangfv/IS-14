@@ -39,10 +39,10 @@ def fix_list(file: str):
 
 
 result = 0
-for i in fix_list(FILE_NAME):
+for i in fix_list(file_name):
     result += 1
-    for fio in fio_read(FILE_NAME):
-        with open(f"{translit(fio, 'ru', True)}.txt", "w", encoding='utf-8') as file:
-            file.write("{};{}".format(*i))
+    with open(f"{translit(i[0], 'ru', True)}.txt", "w", encoding='utf-8') as file:
+        print(*i)
+        file.write("{};{}".format(*i))
 
 print(f"Cгенерировано {result}")
