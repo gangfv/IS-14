@@ -39,7 +39,7 @@ def fix_list(file: str):
 
 
 result = 0
-for i in fix_list(file_name):
+for i in fix_list(FILE_NAME):
     result += 1
     with open(f"{translit(i[0], 'ru', True)}.txt", "w", encoding='utf-8') as file:
         print(*i)
